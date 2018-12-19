@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Temp Converter</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Temperature Converter</h1>
+	</header>
+
+	<article>
+		<h2 id="heading1">Fahrenheit (&#0176;F) to Celsius (&#0176;C) Converter</h2>
+		<h2 id="heading2">Enter Temperature in &#176;F</h2>
+		<form>
+			<fieldset>
+				<label for="fValue">
+					
+				</label>
+				<input id="fValue" type="number">
+			</fieldset>
+
+			<fieldset>
+				<button id="button" type="button">Convert</button>
+			</fieldset>
+
+			<fieldset>
+				<h2 id="c">Temperature in &#176;C</h2>
+				<p id="cValue"></p>
+			</fieldset>
+		</form>
+	</article>
+
+	<script>
+		// Function to convert and fahrenheit value to celsius
+		function tempConvert() {
+			var degF = document.getElementById("fValue").value;
+			var degC = (degF - 32) * 5/9;
+			document.getElementById("cValue").textContent = degC.toFixed(1);
+		}
+
+		// Event listener for the button element
+		document.getElementById("button").addEventListener("click", tempConvert);
+	</script>
+
+</body>
+</html>
